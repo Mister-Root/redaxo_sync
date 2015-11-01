@@ -40,25 +40,29 @@ class Sync
     
     public static $output = [];
     
-    function __construct()
+    public static function __contstruct()
     {
-	self::$patterns = rex_addon::get('sync')->getConfig();
-	self::$redaxo_dir = rex_path::backend();
-	self::setVariables();
-	
+	self::load();
+    }
+    
+    public static function load()
+    {
 	self::initialize();
 	self::synchronize();
     }
-
-    public static function initialize()
+    
+    private static function initialize()
     {
-	
 	if (version_compare(PHP_VERSION, '5.3.0', '>=')) {
 	    // suppress errors in REDAXO
 	    error_reporting(E_ALL & ~E_STRICT & ~E_DEPRECATED);
 	}
 	$configFile = rex_path::data('config.yml');
-
+	
+	self::$patterns = rex_addon::get('sync')->getConfig();
+	self::$redaxo_dir = rex_path::backend();
+	self::setVariables();
+	
 	if (file_exists($configFile)) {
 	    $yaml = new Parser();
 	    self::$config = $yaml->parse(rex_file::get($configFile));
@@ -70,7 +74,7 @@ class Sync
 	}
     }
 
-    public static function synchronize()
+    private static function synchronize()
     {
 	self::$rebuild_cache = false; // article-cache will be regenerated in case of any changes
 

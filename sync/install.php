@@ -18,6 +18,8 @@ $settings['modules_out_suffix'] = '.output.module.php';
 $settings['actions_preview_suffix'] = '.preview.action.php';
 $settings['actions_presave_suffix'] = '.presave.action.php';
 $settings['actions_postsave_suffix'] = '.postsave.action.php';
+$settings['backend_sync'] = 1;
+$settings['frontend_sync'] = 1;
 
 foreach ($settings as $key => $value) {
     $this->setConfig($key, $value);

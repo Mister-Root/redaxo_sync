@@ -17,6 +17,8 @@ label_actions_presave_suffix = Aktion Presave Suffix
 label_actions_postsave_suffix = Aktion Postsave Suffix
 save_settings = Speichern
 config_saved = Einstellungen gespeichert
+label_backend_sync = Sync im Backend aktivieren
+label_frontend_sync = Sync im Frontend aktivieren
 
 // FUNCTIONS
 sync_functions = Funktionen
