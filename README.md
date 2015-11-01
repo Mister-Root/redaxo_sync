@@ -42,7 +42,7 @@
 &lt;?php
 /**
  * @rex_param	id	    1
- * @rex_param	name	    Modulname
+ * @rex_param	name    Modulname
  * @rex_param	rev	    1.0
  */
 ?&gt;
@@ -66,10 +66,10 @@
 &lt;?php
 /**
  * @rex_param	id	    1
- * @rex_param	name	    Testaktion
+ * @rex_param	name    Testaktion
  * @rex_param	rev	    1.0
  * @rex_event	ADD	    1
- * @rex_event	EDIT	    1
+ * @rex_event	EDIT    1
  */
 ?&gt;
 </pre>
