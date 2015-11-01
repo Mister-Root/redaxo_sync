@@ -79,6 +79,9 @@
     @rex_param name: Eindeutiger <b>Name</b><br>
     @rex_param active: <b>1</b> (aktiv) oder <b>0</b> (inaktiv)<br>
     @rex_param rev: Beliebige Revisionsbezeichnung
+    @rex_event ADD: <b>1</b> (aktiv) oder <b>0</b> (inaktiv)<br>
+    @rex_event EDIT: <b>1</b> (aktiv) oder <b>0</b> (inaktiv)<br>
+    @rex_event DELETE: <b>1</b> (aktiv) oder <b>0</b> (inaktiv)<br>
 </p>
 <h2>Benutzerdefinierte Konfiguration</h2>
 <p>Es ist möglich im <b>Addon Sync</b> unter <b>Einstellungen</b> die <b>Suffixe</b> für die Benennung und die <b>Ordner</b> für den Sync festzulegen.</p>
