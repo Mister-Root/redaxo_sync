@@ -1,0 +1,25 @@
+sync = Sync
+sync_title = Sync
+config = Einstellungen
+settings = Einstellungen
+actions = Funktionen
+
+// EDIT
+edit_settings = Einstellungen bearbeiten
+label_templates_dir = Template Verzeichnis
+label_modules_dir = Modul Verzeichnis
+label_actions_dir = Aktion Verzeichnis
+label_template_suffix = Template Suffix
+label_modules_in_suffix = Modul Eingabe Suffix
+label_modules_out_suffix = Modul Ausgabe Suffix
+label_actions_preview_suffix = Aktion Preview Suffix
+label_actions_presave_suffix = Aktion Presave Suffix
+label_actions_postsave_suffix = Aktion Postsave Suffix
+save_settings = Speichern
+config_saved = Einstellungen gespeichert
+
+// FUNCTIONS
+sync_functions = Funktionen
+sync_start = Sync manuell ausführen
+sync_text =  Geänderte Aktionen, Module und Templates werden in der Datenbank aktualisiert.
+sync_confirm = Sync wirklich manuell ausführen

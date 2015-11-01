@@ -1,0 +1,13 @@
+package: sync
+version: '5.0-alpha7'
+author: Pascal Ruscher
+supportpage: support@dev-train.com
+
+page:
+    title: 'translate:sync'
+    perm: sync[]
+    pjax: false
+    icon: rex-icon fa fa-refresh
+    subpages:
+        actions: { title: 'translate:actions' }
+        settings: { title: 'translate:settings' }
