@@ -7,11 +7,12 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-function reload()
+rex_extension::register('PACKAGES_INCLUDED', function () 
 {
-    new Sync();
-}
-if (rex::isBackend() && rex::getUser()) {
-    
-    rex_extension::register('PAGE_HEADER', 'reload');
-}
+    if ((rex_addon::get('sync')->getConfig('backend_sync') && rex::isBackend())
+	|| (rex_addon::get('sync')->getConfig('frontend_sync') && !rex::isBackend())) {
+	if (($user = rex_backend_login::createUser()) && $user->isAdmin()) {
+	    Sync::load();
+	}
+    }
+});

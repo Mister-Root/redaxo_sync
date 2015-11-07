@@ -31,12 +31,9 @@ if ($func == 'update') {
     echo rex_view::info($this->i18n('config_saved'));
 }
 
-$content = '';
-$content .= '
+$content = '
     <fieldset>
-        <input type="hidden" name="func" value="update" />
 ';
-
 	$formElements = [];
 	foreach ($settings as $key => $value) {
 	    $n = [];
@@ -85,11 +82,11 @@ $content .= '
     $fragment->setVar('title', rex_i18n::msg('edit_settings'));
     $fragment->setVar('body', $content, false);
     $fragment->setVar('buttons', $buttons, false);
-    $content = $fragment->parse('core/page/section.php');
+    $parsedContent = $fragment->parse('core/page/section.php');
 
-    $content = '
+    $form = '
         <form id="rex-form-sync-settings" action="' . rex_url::currentBackendPage() . '" method="post">
-            ' . $content . '
+            ' . $parsedContent . '
         </form>';
 
-    echo $content;
+    echo $form;

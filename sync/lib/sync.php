@@ -226,7 +226,7 @@ class Sync
 
 	self::$sql->setTable(self::$config['table_prefix'] . 'module');
 	self::$sql->setWhere('id = ' . intval($id));
-	self::$sql->setValue($contentField, addslashes($content));
+	self::$sql->setValue($contentField, $content);
 	if (!empty($title)) { self::$sql->setValue('name', trim($title)); }
 	self::$sql->setValue('updateuser', 'admin');
 	self::$sql->setValue('updatedate', date('Y-m-d H:i:s'));
@@ -301,7 +301,7 @@ class Sync
 	self::$sql->setTable(self::$config['table_prefix'] . 'template');
 	self::$sql->setWhere('id = ' . intval($id));
 	self::$sql->setValue('name', trim($title));
-	self::$sql->setValue($contentField, addslashes($content));
+	self::$sql->setValue($contentField, $content);
 	self::$sql->setValue('updateuser', 'admin');
 	self::$sql->setValue('updatedate', date('Y-m-d H:i:s'));
 	if (isset($active)) { self::$sql->setValue('active', intval($active)); }
@@ -331,7 +331,7 @@ class Sync
 	self::$sql->setTable(self::$config['table_prefix'] . 'action');
 	self::$sql->setWhere('id = ' . intval($id));
 	if (!empty($title)) { self::$sql->setValue('name', trim($title)); }
-	self::$sql->setValue($contentField, addslashes($content));
+	self::$sql->setValue($contentField, $content);
 	self::$sql->setValue($contentField.'mode', $bitmask);
 	self::$sql->setValue('updateuser', 'admin');
 	self::$sql->setValue('updatedate', date('Y-m-d H:i:s'));
@@ -392,7 +392,7 @@ class Sync
 	self::$sql->setTable(self::$config['table_prefix'] . 'module');
 	self::$sql->setValue('id', intval($id));
 	self::$sql->setValue('name', trim($title));
-	self::$sql->setValue($contentField, addslashes($content));
+	self::$sql->setValue($contentField, $content);
 	self::$sql->setValue('createuser', 'admin');
 	self::$sql->setValue('createdate', date('Y-m-d H:i:s'));
 	self::$sql->setValue('revision', $revision);
@@ -428,7 +428,7 @@ class Sync
 	self::$sql->setTable(self::$config['table_prefix'] . 'template');
 	self::$sql->setValue('id', trim($id));
 	self::$sql->setValue('name', trim($title));
-	self::$sql->setValue($contentField, addslashes($content));
+	self::$sql->setValue($contentField, $content);
 	self::$sql->setValue('active', (isset($active) ? intval($active) : 0));
 	self::$sql->setValue('createuser', 'admin');
 	self::$sql->setValue('createdate', date('Y-m-d H:i:s'));
@@ -459,7 +459,7 @@ class Sync
 	self::$sql->setTable(self::$config['table_prefix'] . 'action');
 	self::$sql->setValue('id', intval($id));
 	self::$sql->setValue('name', trim($title));
-	self::$sql->setValue($contentField, addslashes($content));
+	self::$sql->setValue($contentField, $content);
 	self::$sql->setValue($contentField.'mode', $bitmask);
 	self::$sql->setValue('createuser', 'admin');
 	self::$sql->setValue('createdate', date('Y-m-d H:i:s'));
