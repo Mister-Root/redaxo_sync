@@ -1,4 +1,4 @@
-<h1>Sync Addon für Redaxo 5</h1>
+<h1>Sync Addon für Redaxo 5 !!! NOT MAINTAINED ANYMORE !!!</h1>
 <h2>Beschreibung</h2>
 <p>Module und Templates können mit diesem Addon über das Dateisystem eingespielt werden.</p>
 <p>Bei jedem Neuladen des Redaxo Backends, werden die Dateien in die Datenbank übernommen.</p>
